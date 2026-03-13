@@ -24,8 +24,8 @@
         <main class="main-content">
             <section class="content-box">
                 <h2>İletişim Bilgilerim</h2>
-                <p>E-posta: <a href="mailto:kaanmarmara04@gmail.com">kaanmarmara04@gmail.com</a></p>
-                <p>GitHub: <a href="https://github.com/KaanCelik4" target="_blank">KaanCelik4</a></p>
+                <p>E-posta: <a href="mailto:kaan@example.com">kaan@example.com</a></p>
+                <p>GitHub: <a href="https://github.com/kaancelik4" target="_blank">kaancelik4</a></p>
             </section>
 
             <aside class="sidebar-box">
@@ -34,6 +34,54 @@
                 <p>İş birlikleri için e-posta üzerinden iletişime geçebilirsiniz.</p>
             </aside>
         </main>
+
+        <div class="contact-container">
+            <h2>Detaylı İletişim Formu</h2>
+            <form>
+                <label for="name">Ad Soyad:</label>
+                <input type="text" id="name" name="name" placeholder="Örn: Asaf Karataş" required>
+
+                <label for="email">E-posta Adresi:</label>
+                <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+
+                <label for="password">Başvuru Takip Şifresi:</label>
+                <input type="password" id="password" name="password" placeholder="Şifrenizi girin">
+
+                <label>İletişim Tercihi:</label>
+                <div class="radio-group">
+                    <input type="radio" id="email-pref" name="pref" value="email">
+                    <label for="email-pref" style="display:inline; font-weight:normal;">Bana e-posta ile ulaşın</label><br>
+                    <input type="radio" id="phone-pref" name="pref" value="phone">
+                    <label for="phone-pref" style="display:inline; font-weight:normal;">Bana telefonla ulaşın</label>
+                </div>
+
+                <label>İlgi Alanları / Yetenekler:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="html" name="skill" value="html"> <label for="html" style="display:inline; font-weight:normal;">HTML</label><br>
+                    <input type="checkbox" id="css" name="skill" value="css"> <label for="css" style="display:inline; font-weight:normal;">CSS</label><br>
+                    <input type="checkbox" id="algo" name="skill" value="algo"> <label for="algo" style="display:inline; font-weight:normal;">Algoritma</label>
+                </div>
+
+                <label for="subject">Konu:</label>
+                <select id="subject" name="subject">
+                    <option value="">Lütfen bir konu seçin...</option>
+                    <option value="offer">İş Teklifi</option>
+                    <option value="question">Soru</option>
+                    <option value="feedback">Geri Bildirim</option>
+                </select>
+
+                <label for="file">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+                <input type="file" id="file" name="file">
+
+                <label for="message">Mesajınız:</label>
+                <textarea id="message" name="message" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-send">Gönder</button>
+                    <button type="reset" class="btn-clear">Temizle</button>
+                </div>
+            </form>
+        </div>
 
         <footer>
             © 2026 Mustafa Kaan Çelik | Web Programlama Dersi

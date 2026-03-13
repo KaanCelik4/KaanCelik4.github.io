@@ -81,6 +81,79 @@ header {
     margin-bottom: 10px;
 }
 
+/* İletişim Formu Stilleri (Lab 3) */
+.contact-container {
+    width: 600px; /* Belirlenen genişlik [cite: 119] */
+    margin: 30px auto; /* Sayfayı ortalama [cite: 119] */
+    padding: 25px; /* İç boşluk [cite: 120] */
+    border: 1px solid #ddd; /* Belirgin kenarlık [cite: 121] */
+    border-radius: 10px; /* Köşe yuvarlama [cite: 121] */
+    background-color: #f9f9f9;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+/* Form Elemanları Çoklu Seçici [cite: 122, 127] */
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+select, 
+textarea {
+    width: 100%; /* Tam genişlik [cite: 123] */
+    padding: 10px; /* Yazı için iç boşluk [cite: 124] */
+    margin-bottom: 15px; /* Alt boşluk [cite: 125] */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 12px 20px; /* Padding ile büyütme [cite: 126] */
+    border: none; /* Kenarlık kaldırma [cite: 126] */
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-send {
+    background-color: #007bff; /* Arka plan rengi [cite: 126] */
+    color: white;
+}
+
+.btn-clear {
+    background-color: #dc3545; /* Arka plan rengi [cite: 126] */
+    color: white;
+}
+
+.radio-group, .checkbox-group {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
 footer {
     text-align: center;
     padding: 15px;
