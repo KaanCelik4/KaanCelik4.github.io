@@ -2,42 +2,93 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mustafa Kaan Çelik | Ana Sayfa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="about.html">Hakkımda</a></li>
-                <li><a href="interests.html">İlgi Alanlarım</a></li>
-                <li><a href="contact.html">İletişim</a></li>
-            </ul>
+
+    <div class="wrapper">
+        
+        <nav class="navbar">
+            <div class="logo">
+    <img src="logo.png" alt="Site Logosu">
+</div>
+            <div class="nav-links">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="about.html">Hakkımda</a>
+                <a href="interests.html">İlgi Alanlarım</a>
+                <a href="contact.html">İletişim</a>
+            </div>
         </nav>
 
-        <header>
-            <h1>MUSTAFA KAAN ÇELİK</h1>
-            <p>Bilgisayar Mühendisliği Öğrencisi - Web Programlama Uygulamaları</p>
-        </header>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>MUSTAFA KAAN ÇELİK</h1>
+                <p>Bilgisayar Mühendisliği Öğrencisi - Web Programlama Uygulamaları</p>
+                <button>Daha Fazla</button>
+            </div>
+            <div class="hero-image">
+                <span>Görsel Kutusu</span>
+            </div>
+        </section>
 
-        <main class="main-content">
-            <section class="content-box">
-                <h2>İçerik</h2>
+        <section class="cards-section">
+            <div class="card">
+                <h3>İçerik</h3>
                 <p>Bu site bir bilgisayar mühendisi öğrencisinin Web Programlama dersinde yaptığı uygulamaları temsil eder.</p>
-                <p>Ders kapsamında HTML5 yapısı, CSS3 stilleri ve modern web standartları üzerine çalışmalar gerçekleştirilmektedir.</p>
-            </section>
+                <button>İncele</button>
+            </div>
+            <div class="card">
+                <h3>Bilgi</h3>
+                <p>Web programlama, internet üzerinde çalışan uygulamaların geliştirilmesi sürecidir.</p>
+                <button>İncele</button>
+            </div>
+            <div class="card">
+                <h3>Frontend</h3>
+                <p>Görsel tasarım ve kullanıcı arayüzü (HTML/CSS) geliştirme süreçlerini kapsar.</p>
+                <button>İncele</button>
+            </div>
+            <div class="card">
+                <h3>Backend</h3>
+                <p>Sunucu tarafındaki işlemleri ve veritabanı yönetimini içerir.</p>
+                <button>İncele</button>
+            </div>
+            <div class="card">
+                <h3>Modern Web</h3>
+                <p>Ders kapsamında modern web standartları üzerine çalışmalar gerçekleştirilmektedir.</p>
+                <button>İncele</button>
+            </div>
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Günümüzde modern web geliştirme dinamik yapılarla şekillenmektedir.</p>
+                <button>İncele</button>
+            </div>
+        </section>
 
-            <aside class="sidebar-box">
-                <h2>Bilgi</h2>
-                <p>Web programlama, internet üzerinde çalışan uygulamaların geliştirilmesi sürecidir. Bu süreç hem görsel tasarımı (Frontend) hem de sunucu tarafındaki işlemleri (Backend) kapsar.</p>
-                <p>Günümüzde modern web geliştirme; HTML, CSS ve JavaScript temelleri üzerine inşa edilen dinamik yapılarla şekillenmektedir.</p>
-            </aside>
-        </main>
+        <section class="flex-grow-section">
+            <div class="grow-box box1">
+                <h4>1. Kutu</h4>
+                <p>flex-grow: 1</p>
+                <button>Tıkla</button>
+            </div>
+            <div class="grow-box box2">
+                <h4>2. Kutu</h4>
+                <p>flex-grow: 2</p>
+                <button>Tıkla</button>
+            </div>
+            <div class="grow-box box3">
+                <h4>3. Kutu</h4>
+                <p>flex-grow: 1</p>
+                <button>Tıkla</button>
+            </div>
+        </section>
 
-        <footer>
-            © 2026 Mustafa Kaan Çelik | Web Programlama Dersi
+        <footer class="footer">
+            <p>© 2026 Mustafa Kaan Çelik | Web Programlama Dersi</p>
         </footer>
+
     </div>
+
 </body>
 </html>
