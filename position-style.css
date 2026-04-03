@@ -20,7 +20,7 @@ body {
    SABİT (FIXED) ÖĞELER 
    ========================================= */
 .fixed-back {
-    position: fixed; /* Kural: Fixed kullanım */
+    position: fixed; 
     top: 20px;
     left: 20px;
     background-color: #333;
@@ -30,21 +30,21 @@ body {
     border-radius: 5px;
     font-size: 14px;
     z-index: 100;
-    cursor: pointer; /* Kural: Cursor değişimi */
+    cursor: pointer; 
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .fixed-back:hover {
     background-color: #007bff;
-    transform: translateY(-3px); /* Kural: Hover animasyonu */
+    transform: translateY(-3px); 
 }
 
 .fixed-back:active {
-    transform: scale(0.95); /* Kural: :active efekti */
+    transform: scale(0.95); 
 }
 
 .fixed-help {
-    position: fixed; /* Kural: 2. Fixed öğe */
+    position: fixed; 
     bottom: 20px;
     right: 20px;
     background-color: #17a2b8;
@@ -52,7 +52,7 @@ body {
     padding: 12px 20px;
     border-radius: 50px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    cursor: help; /* Kural: Farklı cursor kullanımı */
+    cursor: help; 
     z-index: 100;
     transition: background-color 0.3s ease;
 }
@@ -74,7 +74,7 @@ body {
     padding: 20px;
     font-size: 12px;
     color: #666;
-    margin-top: auto; /* Sayfa altına iter */
+    margin-top: auto; 
 }
 
 .main-container {
@@ -89,14 +89,14 @@ body {
    ANA KART (RELATIVE KAPSAYICI)
    ========================================= */
 .announcement-card {
-    position: relative; /* Kural: Kapsayıcı relative olmalı */
+    position: relative; 
     width: 100%;
     max-width: 650px;
-    background-color: #e6e6fa; /* Morumsu arka plan */
+    background-color: #e6e6fa; 
     border-radius: 15px;
     padding: 60px 40px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    overflow: hidden; /* Dışarı taşan dekoratif yuvarlağı keser */
+    overflow: hidden; 
 }
 
 /* =========================================
@@ -110,12 +110,12 @@ body {
     border-radius: 50%;
     right: -50px;
     bottom: -50px;
-    z-index: 1; /* Kural: z-index kullanımı */
+    z-index: 1; 
 }
 
 .card-content {
     position: relative;
-    z-index: 5; /* Yazıların yuvarlağın üstünde kalması için */
+    z-index: 5; 
 }
 
 .card-content h2 {
@@ -129,55 +129,78 @@ body {
     line-height: 1.6;
     color: #4b4b6b;
     margin-bottom: 30px;
-    max-width: 60%; /* YAZI GENİŞLİĞİ DARALTILDI (Rozetlere çarpmasın diye) */
+    max-width: 60%; 
 }
 
 /* =========================================
-   KART İÇİ ROZETLER (ABSOLUTE)
+   KART İÇİ ROZETLER (ABSOLUTE) VE ANİMASYONLAR
    ========================================= */
 .badge {
-    position: absolute; /* Kural: Absolute kullanımı */
+    position: absolute; 
     padding: 8px 15px;
     border-radius: 8px;
     font-weight: bold;
     font-size: 14px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 10; /* En üstte durmaları için */
+    z-index: 10; 
+    transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
 /* 1. Rozet: Sol Üst */
 .badge-free {
     top: 20px;
     left: 20px;
-    background-color: #fdfd96; /* Sarımsı */
+    background-color: #fdfd96; 
     color: #555;
-    cursor: crosshair;
-    animation: float 3s ease-in-out infinite; /* Kural: @keyframes animasyon */
+    cursor: pointer; 
+    animation: float 3s ease-in-out infinite; 
+}
+
+.badge-free:hover {
+    transform: scale(1.15); 
 }
 
 /* 2. Rozet: Sağ Üst */
 .badge-date {
     top: 20px;
     right: 20px;
-    background-color: #dff9df; /* Yeşimsi */
+    background-color: #dff9df; 
     color: #2c542c;
+    cursor: grab; 
 }
 
-/* 3. Rozet: Orta Sağ (AŞAĞI ÇEKİLDİ) */
+.badge-date:hover {
+    transform: rotate(8deg) scale(1.1); 
+    background-color: #c0ebc0; 
+}
+
+/* 3. Rozet: Orta Sağ */
 .badge-location {
-    top: 65%; /* 50% yerine 65% yapıldı */
+    top: 65%; 
     right: 20px;
     transform: translateY(-50%);
     background-color: #ffffff;
     color: #555;
+    cursor: text; 
+}
+
+.badge-location:hover {
+    transform: translateY(-50%) translateX(-15px) scale(1.05); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
 }
 
 /* 4. Rozet: Sağ Alt */
 .badge-deadline {
     bottom: 20px;
     right: 20px;
-    background-color: #ffe4b5; /* Şeftali */
+    background-color: #ffe4b5; 
     color: #8b4513;
+    cursor: help; 
+}
+
+.badge-deadline:hover {
+    transform: translateY(-10px) scale(1.1); 
+    background-color: #ffcc66; 
 }
 
 /* =========================================
