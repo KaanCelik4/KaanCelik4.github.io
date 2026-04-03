@@ -20,7 +20,7 @@ body {
    SABİT (FIXED) ÖĞELER 
    ========================================= */
 .fixed-back {
-    position: fixed; /* Kural: Fixed kullanım [cite: 123] */
+    position: fixed; /* Kural: Fixed kullanım */
     top: 20px;
     left: 20px;
     background-color: #333;
@@ -30,21 +30,21 @@ body {
     border-radius: 5px;
     font-size: 14px;
     z-index: 100;
-    cursor: pointer; /* Kural: Cursor değişimi [cite: 124] */
+    cursor: pointer; /* Kural: Cursor değişimi */
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .fixed-back:hover {
     background-color: #007bff;
-    transform: translateY(-3px); /* Kural: Hover animasyonu [cite: 127] */
+    transform: translateY(-3px); /* Kural: Hover animasyonu */
 }
 
 .fixed-back:active {
-    transform: scale(0.95); /* Kural: :active efekti [cite: 128] */
+    transform: scale(0.95); /* Kural: :active efekti */
 }
 
 .fixed-help {
-    position: fixed; /* Kural: 2. Fixed öğe [cite: 138] */
+    position: fixed; /* Kural: 2. Fixed öğe */
     bottom: 20px;
     right: 20px;
     background-color: #17a2b8;
@@ -52,7 +52,7 @@ body {
     padding: 12px 20px;
     border-radius: 50px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    cursor: help; /* Kural: Farklı cursor kullanımı [cite: 124] */
+    cursor: help; /* Kural: Farklı cursor kullanımı */
     z-index: 100;
     transition: background-color 0.3s ease;
 }
@@ -89,7 +89,7 @@ body {
    ANA KART (RELATIVE KAPSAYICI)
    ========================================= */
 .announcement-card {
-    position: relative; /* Kural: Kapsayıcı relative olmalı [cite: 121] */
+    position: relative; /* Kural: Kapsayıcı relative olmalı */
     width: 100%;
     max-width: 650px;
     background-color: #e6e6fa; /* Morumsu arka plan */
@@ -110,12 +110,12 @@ body {
     border-radius: 50%;
     right: -50px;
     bottom: -50px;
-    z-index: 1; /* Kural: z-index kullanımı [cite: 130] */
+    z-index: 1; /* Kural: z-index kullanımı */
 }
 
 .card-content {
     position: relative;
-    z-index: 5; /* Yazıların yuvarlağın üstünde kalması için [cite: 130] */
+    z-index: 5; /* Yazıların yuvarlağın üstünde kalması için */
 }
 
 .card-content h2 {
@@ -129,29 +129,14 @@ body {
     line-height: 1.6;
     color: #4b4b6b;
     margin-bottom: 30px;
-    max-width: 60%;
-}
-
-.join-btn {
-    background-color: #8da4d0;
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.join-btn:hover {
-    background-color: #6a89cc;
+    max-width: 60%; /* YAZI GENİŞLİĞİ DARALTILDI (Rozetlere çarpmasın diye) */
 }
 
 /* =========================================
    KART İÇİ ROZETLER (ABSOLUTE)
    ========================================= */
 .badge {
-    position: absolute; /* Kural: Absolute kullanımı [cite: 122] */
+    position: absolute; /* Kural: Absolute kullanımı */
     padding: 8px 15px;
     border-radius: 8px;
     font-weight: bold;
@@ -167,7 +152,7 @@ body {
     background-color: #fdfd96; /* Sarımsı */
     color: #555;
     cursor: crosshair;
-    animation: float 3s ease-in-out infinite; /* Kural: @keyframes animasyon [cite: 129] */
+    animation: float 3s ease-in-out infinite; /* Kural: @keyframes animasyon */
 }
 
 /* 2. Rozet: Sağ Üst */
@@ -178,9 +163,9 @@ body {
     color: #2c542c;
 }
 
-/* 3. Rozet: Orta Sağ */
+/* 3. Rozet: Orta Sağ (AŞAĞI ÇEKİLDİ) */
 .badge-location {
-    top: 50%;
+    top: 65%; /* 50% yerine 65% yapıldı */
     right: 20px;
     transform: translateY(-50%);
     background-color: #ffffff;
