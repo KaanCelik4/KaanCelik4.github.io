@@ -1,11 +1,11 @@
+// Uygulama 1: Not Hesaplama Fonksiyonu
 function notHesapla() {
-    const ad = document.getElementById("adSoyad").value;
-    const vize = parseFloat(document.getElementById("vize").value);
-    const final = parseFloat(document.getElementById("final").value);
-    const sonucDiv = document.getElementById("notSonuc");
+    const ad = document.getElementById('adSoyad').value;
+    const vize = parseFloat(document.getElementById('vizeNotu').value);
+    const final = parseFloat(document.getElementById('finalNotu').value);
 
     if (!ad || isNaN(vize) || isNaN(final)) {
-        alert("Lütfen tüm alanları doldurun!");
+        alert("Lütfen alanları doldurun!");
         return;
     }
 
@@ -18,22 +18,34 @@ function notHesapla() {
     else if (ortalama >= 50) harf = "CC";
     else harf = "FF";
 
-    sonucDiv.innerHTML = `<strong>${ad}</strong><br>Ortalama: ${ortalama.toFixed(2)}<br>Harf Notu: ${harf}<br>Durum: ${ortalama >= 50 ? 'Geçti' : 'Kaldı'}`;
-    sonucDiv.style.display = "block";
+    const durum = ortalama >= 50 ? "Geçti" : "Kaldı";
+
+    document.getElementById('resAd').innerText = ad;
+    document.getElementById('resOrt').innerText = "Ortalama: " + ortalama.toFixed(2);
+    document.getElementById('resHarf').innerText = "Harf Notu: " + harf;
+    document.getElementById('resDurum').innerText = "Durum: " + durum;
+    document.getElementById('notSonuc').style.display = "block";
 }
 
-function birimDonustur() {
-    const deger = parseFloat(document.getElementById("birimDeger").value);
-    const tip = document.getElementById("donusumTipi").value;
-    const sonucDiv = document.getElementById("birimSonuc");
+// Uygulama 2: Birim Dönüştürücü Fonksiyonu
+function birimHesapla() {
+    const deger = parseFloat(document.getElementById('birimDeger').value);
+    const tip = document.getElementById('donusumTipi').value;
     let sonuc = 0;
 
-    if (isNaN(deger)) return;
+    if (isNaN(deger)) {
+        alert("Lütfen bir değer girin!");
+        return;
+    }
 
-    if (tip === "cf") sonuc = (deger * 9/5) + 32;
-    else if (tip === "mk") sonuc = deger / 1000;
-    else if (tip === "kg") sonuc = deger * 1000;
+    if (tip === "c-f") {
+        sonuc = (deger * 9/5) + 32; // Celsius to Fahrenheit
+    } else if (tip === "m-km") {
+        sonuc = deger / 1000; // Metre to KM
+    } else if (tip === "kg-gr") {
+        sonuc = deger * 1000; // KG to Gram
+    }
 
-    sonucDiv.innerHTML = `Sonuç: ${sonuc.toLocaleString()}`;
-    sonucDiv.style.display = "block";
+    document.getElementById('resBirim').innerText = "Sonuç: " + sonuc;
+    document.getElementById('birimSonuc').style.display = "block";
 }

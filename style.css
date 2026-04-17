@@ -273,3 +273,66 @@ textarea { height: 100px; resize: vertical; }
     border-bottom: 1px solid #eee;
     text-align: center;
 }
+/* =========================================
+   YENİ JS ÖDEVİ UYGULAMA STİLLERİ
+   ========================================= */
+
+.app-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+}
+
+.app-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.app-card h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #8da4d0;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.app-card input[type="number"], 
+.app-card select,
+.app-card input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.app-card button {
+    background-color: #007bff;
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    margin-top: 5px;
+}
+
+.result-box {
+    background-color: #f0f0f5;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 6px solid #8da4d0;
+    text-align: left;
+}
+
+.result-box h3 { margin-bottom: 5px; }
+.result-box p { margin: 3px 0; font-weight: normal; }

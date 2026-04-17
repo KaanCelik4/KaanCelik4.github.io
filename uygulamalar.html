@@ -2,48 +2,52 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Uygulamalar | Mustafa Kaan Çelik</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Uygulamaları</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <nav class="navbar">
-            <div class="logo"><img src="logo.png" alt="Logo"></div>
-            <div class="nav-links">
-                <a href="index.html">Ana Sayfa</a>
-                <a href="about.html">Hakkında</a>
-                <a href="uygulamalar.html">Uygulamalar</a>
-                <a href="interests.html">Dersler</a>
-                <a href="contact.html">İletişim</a>
-            </div>
-        </nav>
 
-        <main class="app-container">
-            <div class="app-card">
-                <h3>Öğrenci Not Hesaplama</h3>
-                <input type="text" id="adSoyad" class="input-style" placeholder="Ad Soyad">
-                <input type="number" id="vize" class="input-style" placeholder="Vize Notu">
-                <input type="number" id="final" class="input-style" placeholder="Final Notu">
+    <div class="main-container">
+        <div class="app-card">
+            <h2>Öğrenci Not Hesaplama</h2>
+            <div class="input-group">
+                <input type="text" id="adSoyad" placeholder="Ad Soyad">
+                <input type="number" id="vizeNotu" placeholder="Vize Notu">
+                <input type="number" id="finalNotu" placeholder="Final Notu">
                 <button onclick="notHesapla()">Hesapla</button>
-                <div id="notSonuc" class="result-box"></div>
             </div>
+            
+            <div id="notSonuc" class="result-box" style="display:none;">
+                <h3 id="resAd"></h3>
+                <p id="resOrt"></p>
+                <p id="resHarf"></p>
+                <p id="resDurum"></p>
+            </div>
+        </div>
 
-            <div class="app-card">
-                <h3>Birim Dönüştürücü</h3>
-                <input type="number" id="birimDeger" class="input-style" placeholder="Değer Girin">
-                <select id="donusumTipi" class="input-style">
-                    <option value="cf">Celsius - Fahrenheit</option>
-                    <option value="mk">Metre - Kilometre</option>
-                    <option value="kg">Kilogram - Gram</option>
+        <hr>
+
+        <div class="app-card">
+            <h2>Birim Dönüştürücü</h2>
+            <div class="input-group">
+                <label>Değer Giriniz</label>
+                <input type="number" id="birimDeger" placeholder="Örn: 50">
+                
+                <label>Dönüşüm Tipi</label>
+                <select id="donusumTipi">
+                    <option value="c-f">Celsius - Fahrenheit</option>
+                    <option value="m-km">Metre - Kilometre</option>
+                    <option value="kg-gr">Kilogram - Gram</option>
                 </select>
-                <button onclick="birimDonustur()">Dönüştür</button>
-                <div id="birimSonuc" class="result-box"></div>
+                
+                <button onclick="birimHesapla()">Hesapla</button>
             </div>
-        </main>
 
-        <footer class="footer">
-            <p>© 2026 Mustafa Kaan Çelik | Web Programlama Ödevi</p>
-        </footer>
+            <div id="birimSonuc" class="result-box" style="display:none;">
+                <h3 id="resBirim"></h3>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
