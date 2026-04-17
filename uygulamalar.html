@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uygulamalar | Mustafa Kaan Çelik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="uygulamalar.html">Uygulamalar</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>JavaScript Uygulamaları</h1>
+            <p>Web Programlama Dersi Ödev Çalışmaları</p>
+        </header>
+
+        <main class="main-content">
+            <section class="content-box">
+                <h2>Öğrenci Not Hesaplama</h2>
+                <div class="form-group">
+                    <input type="text" id="adSoyad" placeholder="Ad Soyad giriniz">
+                    <input type="number" id="vize" placeholder="Vize Notu (%40)">
+                    <input type="number" id="final" placeholder="Final Notu (%60)">
+                    <button onclick="notHesapla()">Hesapla</button>
+                </div>
+                <div id="notSonuc" class="result-display" style="display:none;">
+                    <p><strong>Öğrenci:</strong> <span id="resAd"></span></p>
+                    <p><strong>Ortalama:</strong> <span id="resOrt"></span></p>
+                    <p><strong>Harf Notu:</strong> <span id="resHarf"></span></p>
+                    <p><strong>Durum:</strong> <span id="resDurum"></span></p>
+                </div>
+            </section>
+
+            <aside class="sidebar-box">
+                <h2>Birim Dönüştürücü</h2>
+                <div class="form-group">
+                    <label>Değer Giriniz:</label>
+                    <input type="number" id="birimDeger" placeholder="Örn: 50">
+                    <label>Dönüşüm Tipi:</label>
+                    <select id="donusumTipi">
+                        <option value="cf">Celsius - Fahrenheit</option>
+                        <option value="mk">Metre - Kilometre</option>
+                        <option value="kg">Kilogram - Gram</option>
+                    </select>
+                    <button onclick="birimDonustur()">Hesapla</button>
+                </div>
+                <div id="birimSonuc" class="result-display" style="display:none;">
+                    <p><strong>Sonuç:</strong> <span id="resBirim"></span></p>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            © 2026 Mustafa Kaan Çelik | Marmara Üniversitesi
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
