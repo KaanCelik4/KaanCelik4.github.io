@@ -3,37 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mustafa Kaan Çelik | Ana Sayfa</title>
+    <title>Mustafa Kaan Çelik | Flexbox Ödevi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="wrapper">
+        
         <nav class="navbar">
-            <div class="logo"><strong>MKC</strong></div>
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
             <div class="nav-links">
                 <a href="index.html">Ana Sayfa</a>
-                <a href="about.html">Hakkımda</a>
+                <a href="about.html">Hakkında</a>
                 <a href="interests.html">Dersler</a>
-                <a href="uygulamalar.html">Uygulamalar</a>
                 <a href="contact.html">İletişim</a>
+                <a href="lab-position.html">Duyuru</a>
             </div>
         </nav>
 
         <section class="hero">
             <div class="hero-content">
                 <h1>MUSTAFA KAAN ÇELİK</h1>
-                <p>Marmara Üniversitesi Bilgisayar Mühendisliği Öğrencisi.</p>
-                <p>Öğrenci No: 170423046</p>
-                <button onclick="location.href='about.html'">Hakkımda</button>
+                <p>Bilgisayar Mühendisliği Öğrencisi - Web Programlama Uygulamaları.</p>
+                <button>Buton</button>
             </div>
             <div class="hero-image">
-                <span>Profil Görseli</span>
+                <span>Görsel Kutusu</span>
+            </div>
+        </section>
+
+        <section class="cards-section">
+            <div class="card">
+                <h3>İçerik</h3>
+                <p>Kısa açıklama</p>
+                <button>Buton</button>
+            </div>
+            <div class="card">
+                <h3>Bilgi</h3>
+                <p>Kısa açıklama</p>
+                <button>Buton</button>
+            </div>
+            <div class="card">
+                <h3>Frontend</h3>
+                <p>Kısa açıklama</p>
+                <button>Buton</button>
+            </div>
+            <div class="card">
+                <h3>Backend</h3>
+                <p>Kısa açıklama</p>
+                <button>Buton</button>
+            </div>
+            <div class="card">
+                <h3>Modern Web</h3>
+                <p>Kısa açıklama</p>
+                <button>Buton</button>
+            </div>
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Kısa açıklama</p>
+                <button>Buton</button>
+            </div>
+        </section>
+
+        <section class="flex-grow-section">
+            <div class="grow-box box1">
+                <h4>1 Kutu</h4>
+                <p>flex-grow: 1;</p>
+                <button>Buton</button>
+            </div>
+            <div class="grow-box box2">
+                <h4>2 Kutu</h4>
+                <p>flex-grow: 2;</p>
+                <button>Buton</button>
+            </div>
+            <div class="grow-box box3">
+                <h4>3 Kutu</h4>
+                <p>flex-grow: 1;</p>
+                <button>Buton</button>
             </div>
         </section>
 
         <footer class="footer">
-            <p>© 2026 Mustafa Kaan Çelik | Web Programlama Dersi Uygulaması</p>
+            <p>© 2026 - Temel Flexbox Örneği</p>
         </footer>
+
     </div>
+
 </body>
 </html>
