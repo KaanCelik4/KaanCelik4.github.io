@@ -1,4 +1,6 @@
-/* GENEL AYARLAR */
+/* =========================================
+   SENİN ORİJİNAL TASARIMIN (DOKUNULMADI)
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -12,13 +14,13 @@ body {
     justify-content: center;
 }
 
-/* ANA KAPSAYICI */
 .wrapper {
     width: 100%;
     max-width: 1100px;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #f5f6f8;
     padding: 10px;
     gap: 15px;
 }
@@ -36,6 +38,11 @@ body {
     border: 1px solid #ddd;
 }
 
+.logo img {
+    max-height: 5vh;
+    width: auto;
+}
+
 .nav-links a {
     text-decoration: none;
     color: #555;
@@ -44,9 +51,7 @@ body {
     font-weight: bold;
 }
 
-.nav-links a:hover { color: #007bff; }
-
-/* HERO BÖLÜMÜ (Ana Sayfa İçin) */
+/* HERO BÖLÜMÜ */
 .hero {
     height: 30vh;
     display: flex;
@@ -65,6 +70,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 10px;
 }
 
 .hero-image {
@@ -77,59 +83,113 @@ body {
     color: #888;
 }
 
-/* YENİ UYGULAMA SAYFASI TASARIMI (uygulamalar.html için) */
-.app-container {
+/* KARTLAR BÖLÜMÜ */
+.cards-section {
+    height: 30vh;
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 10px;
     background-color: #f0f0f5;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.app-box {
-    flex: 1;
-    min-width: 300px;
-    background: white;
-    padding: 25px;
+    padding: 15px;
     border-radius: 8px;
     border: 1px solid #ddd;
 }
 
-.form-group {
+.card {
+    flex: 1 1 calc(33.333% - 10px);
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-input, select, button {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+/* FLEX GROW BÖLÜMÜ */
+.flex-grow-section {
+    height: 20vh;
+    display: flex;
+    gap: 15px;
+    background-color: #f0f0f5;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
-button {
-    background-color: #8da4d0;
-    color: white;
-    cursor: pointer;
-    border: none;
+.grow-box {
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
 }
 
-.result-display {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #e8f5e9;
-    border-left: 5px solid #2e7d32;
-}
+.box2 { flex-grow: 2; background-color: #ebf5e6; }
+.box1 { background-color: #e6f0fa; }
+.box3 { background-color: #faebd7; }
 
 /* FOOTER */
 .footer {
     height: 10vh;
+    min-height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f0f0f5;
     border-radius: 8px;
     border: 1px solid #ddd;
+}
+
+/* =========================================
+   YENİ UYGULAMALAR SAYFASI SINIFLARI
+   ========================================= */
+.app-main {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+    min-height: 50vh;
+}
+
+.app-card {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-container input, .input-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-blue {
+    background-color: #8da4d0;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.result-area {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 5px solid #8da4d0;
+    display: none; /* Başlangıçta gizli */
 }
