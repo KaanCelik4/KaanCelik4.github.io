@@ -1,5 +1,5 @@
 /* =========================================
-   SENİN ORİJİNAL TASARIMIN (DOKUNULMADI)
+   ANA YAPI VE NAVBAR SINIFLARI
    ========================================= */
 * {
     margin: 0;
@@ -25,7 +25,6 @@ body {
     gap: 15px;
 }
 
-/* NAVBAR */
 .navbar {
     height: 10vh;
     min-height: 60px;
@@ -43,18 +42,27 @@ body {
     width: auto;
 }
 
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
 .nav-links a {
     text-decoration: none;
     color: #555;
     font-size: 14px;
-    margin-left: 20px;
     font-weight: bold;
 }
 
-/* HERO BÖLÜMÜ */
+/* =========================================
+   HERO VE İÇERİK BÖLÜMLERİ
+   ========================================= */
 .hero {
     height: 30vh;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
     gap: 15px;
     background-color: #f0f0f5;
     padding: 15px;
@@ -70,6 +78,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     gap: 10px;
 }
 
@@ -83,7 +92,9 @@ body {
     color: #888;
 }
 
-/* KARTLAR BÖLÜMÜ */
+/* =========================================
+   KARTLAR VE FLEX-GROW BÖLÜMÜ
+   ========================================= */
 .cards-section {
     height: 30vh;
     display: flex;
@@ -104,12 +115,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 
-/* FLEX GROW BÖLÜMÜ */
 .flex-grow-section {
     height: 20vh;
     display: flex;
+    align-items: stretch;
     gap: 15px;
     background-color: #f0f0f5;
     padding: 15px;
@@ -124,14 +136,15 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    flex: 1;
 }
 
+.box1 { flex-grow: 1; background-color: #e6f0fa; }
 .box2 { flex-grow: 2; background-color: #ebf5e6; }
-.box1 { background-color: #e6f0fa; }
-.box3 { background-color: #faebd7; }
+.box3 { flex-grow: 1; background-color: #faebd7; }
 
-/* FOOTER */
+/* =========================================
+   FOOTER VE BUTONLAR
+   ========================================= */
 .footer {
     height: 10vh;
     min-height: 50px;
@@ -141,55 +154,55 @@ body {
     background-color: #f0f0f5;
     border-radius: 8px;
     border: 1px solid #ddd;
+    color: #666;
 }
 
+button {
+    background-color: #8da4d0;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.3s;
+}
+
+button:hover { background-color: #7a8eb8; }
+
 /* =========================================
-   YENİ UYGULAMALAR SAYFASI SINIFLARI
+   YENİ ÖDEV İÇİN YARDIMCI SINIFLAR
    ========================================= */
-.app-main {
-    flex: 1;
+.app-container {
     display: flex;
     gap: 15px;
-    min-height: 50vh;
+    flex: 1; /* Navbar ve Footer arasını doldurur */
 }
 
 .app-card {
     flex: 1;
-    background: white;
-    padding: 25px;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 8px;
     border: 1px solid #ddd;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.input-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.input-container input, .input-container select {
+.input-style {
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin-top: 5px;
 }
 
-.btn-blue {
-    background-color: #8da4d0;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.result-area {
+.result-box {
     margin-top: 10px;
-    padding: 15px;
-    background-color: #f8f9fa;
+    padding: 10px;
+    background-color: #f9f9f9;
     border-left: 5px solid #8da4d0;
+    font-size: 14px;
     display: none; /* Başlangıçta gizli */
 }

@@ -2,7 +2,6 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uygulamalar | Mustafa Kaan Çelik</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,30 +18,26 @@
             </div>
         </nav>
 
-        <main class="app-main">
+        <main class="app-container">
             <div class="app-card">
-                <h2>Öğrenci Not Hesaplama</h2>
-                <div class="input-container">
-                    <input type="text" id="adSoyad" placeholder="Ad Soyad">
-                    <input type="number" id="vize" placeholder="Vize Notu">
-                    <input type="number" id="final" placeholder="Final Notu">
-                </div>
-                <button class="btn-blue" onclick="notHesapla()">Hesapla</button>
-                <div id="notSonuc" class="result-area"></div>
+                <h3>Öğrenci Not Hesaplama</h3>
+                <input type="text" id="adSoyad" class="input-style" placeholder="Ad Soyad">
+                <input type="number" id="vize" class="input-style" placeholder="Vize Notu">
+                <input type="number" id="final" class="input-style" placeholder="Final Notu">
+                <button onclick="notHesapla()">Hesapla</button>
+                <div id="notSonuc" class="result-box"></div>
             </div>
 
             <div class="app-card">
-                <h2>Birim Dönüştürücü</h2>
-                <div class="input-container">
-                    <input type="number" id="birimDeger" placeholder="Değer Giriniz">
-                    <select id="donusumTipi">
-                        <option value="cf">Celsius → Fahrenheit</option>
-                        <option value="mk">Metre → Kilometre</option>
-                        <option value="kg">Kilogram → Gram</option>
-                    </select>
-                </div>
-                <button class="btn-blue" onclick="birimDonustur()">Hesapla</button>
-                <div id="birimSonuc" class="result-area"></div>
+                <h3>Birim Dönüştürücü</h3>
+                <input type="number" id="birimDeger" class="input-style" placeholder="Değer Girin">
+                <select id="donusumTipi" class="input-style">
+                    <option value="cf">Celsius - Fahrenheit</option>
+                    <option value="mk">Metre - Kilometre</option>
+                    <option value="kg">Kilogram - Gram</option>
+                </select>
+                <button onclick="birimDonustur()">Dönüştür</button>
+                <div id="birimSonuc" class="result-box"></div>
             </div>
         </main>
 
@@ -50,6 +45,7 @@
             <p>© 2026 Mustafa Kaan Çelik | Web Programlama Ödevi</p>
         </footer>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
