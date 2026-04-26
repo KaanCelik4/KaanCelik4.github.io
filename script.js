@@ -1,4 +1,6 @@
-// Uygulama 1: Not Hesaplama Fonksiyonu
+// ==========================================
+// UYGULAMA 1: NOT HESAPLAMA (Mevcut Kodun)
+// ==========================================
 function notHesapla() {
     const ad = document.getElementById('adSoyad').value;
     const vize = parseFloat(document.getElementById('vizeNotu').value);
@@ -27,7 +29,9 @@ function notHesapla() {
     document.getElementById('notSonuc').style.display = "block";
 }
 
-// Uygulama 2: Birim Dönüştürücü Fonksiyonu
+// ==========================================
+// UYGULAMA 2: BİRİM DÖNÜŞTÜRÜCÜ (Mevcut Kodun)
+// ==========================================
 function birimHesapla() {
     const deger = parseFloat(document.getElementById('birimDeger').value);
     const tip = document.getElementById('donusumTipi').value;
@@ -48,4 +52,71 @@ function birimHesapla() {
 
     document.getElementById('resBirim').innerText = "Sonuç: " + sonuc;
     document.getElementById('birimSonuc').style.display = "block";
+}
+
+// ==========================================
+// HAFTA 7: YENİ EKLENEN FONKSİYONLAR
+// ==========================================
+
+// 1. Tema Değiştirme Etkileşimi [cite: 72, 85]
+const temaButonu = document.getElementById('temaButonu');
+if (temaButonu) {
+    temaButonu.addEventListener('click', function () {
+        // classList.toggle ile tema değiştirme [cite: 56, 85]
+        document.body.classList.toggle('dark-mode');
+        
+        if (document.body.classList.contains('dark-mode')) {
+            temaButonu.textContent = 'Açık Temaya Geç';
+            temaButonu.className = 'btn btn-light btn-lg';
+        } else {
+            temaButonu.textContent = 'Koyu Temaya Geç';
+            temaButonu.className = 'btn btn-outline-dark btn-lg';
+        }
+    });
+}
+
+// 2. Form Verilerinden Özet Üretme [cite: 72, 84]
+const kayitFormu = document.getElementById('kayitFormu');
+const sonucKutusu = document.getElementById('sonucKutusu');
+
+if (kayitFormu) {
+    kayitFormu.addEventListener('submit', function (event) {
+        // Sayfa yenilenmesini engelleme 
+        event.preventDefault();
+
+        // Form değerlerini alma [cite: 53]
+        const adSoyad = document.getElementById('adSoyad').value;
+        const email = document.getElementById('email').value;
+        const bolum = document.getElementById('bolum').value;
+        const sinif = document.getElementById('sinif').value;
+        const oturum = document.getElementById('oturum').value;
+        const tur = document.getElementById('tur').value;
+        const mesaj = document.getElementById('mesaj').value;
+        const onay = document.getElementById('onay').checked;
+
+        // Koşullu eksik alan kontrolü [cite: 54, 83]
+        if (!adSoyad || !email || !bolum || !sinif) {
+            alert("Lütfen tüm zorunlu alanları doldurunuz!");
+            return;
+        }
+
+        if (!onay) {
+            alert("Lütfen bilgilendirme onayını işaretleyiniz.");
+            return;
+        }
+
+        // Dinamik başvuru özeti oluşturma [cite: 84, 119]
+        sonucKutusu.classList.remove('alert-info');
+        sonucKutusu.classList.add('alert-success');
+        
+        sonucKutusu.innerHTML = `
+            <h4 class="alert-heading fw-bold mb-3">Başvuru Özeti Başarıyla Oluşturuldu</h4>
+            <p><strong>Ad Soyad:</strong> ${adSoyad}</p>
+            <p><strong>E-posta:</strong> ${email}</p>
+            <p><strong>Bölüm / Sınıf:</strong> ${bolum} - ${sinif}</p>
+            <p><strong>Oturum Tercihi:</strong> ${oturum} (${tur})</p>
+            <hr>
+            <p class="mb-0"><strong>Mesajınız:</strong> ${mesaj ? mesaj : 'Mesaj belirtilmedi.'}</p>
+        `;
+    });
 }
